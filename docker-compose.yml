@@ -1,0 +1,18 @@
+version: "3"
+services:
+    jupyter:
+        build: .
+        volumes:
+            - ${PWD}/code:/code
+            - ${PWD}/.kaggle:/root/.kaggle
+            - ${PWD}/input:/dataset
+        working_dir: /code
+        ports:
+            - 8888:8888
+        command: jupyter-lab --ip 0.0.0.0 --allow-root -b localhost --NotebookApp.token=''
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          capabilities: [gpu]
