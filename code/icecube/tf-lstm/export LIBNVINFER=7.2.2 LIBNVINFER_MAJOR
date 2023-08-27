@@ -1,0 +1,5 @@
+export LIBNVINFER=7.2.2 LIBNVINFER_MAJOR_VERSION=7 CUDA_VERSION=11.1
+apt-get install -y libnvinfer${LIBNVINFER_MAJOR_VERSION}_${LIBNVINFER}-1+cuda${CUDA_VERSION}_amd64 libnvinfer-plugin${LIBNVINFER_MAJOR_VERSION}_${LIBNVINFER}-1+cuda${CUDA_VERSION}
+sudo update-alternatives --install /usr/local/cuda cuda /usr/local/cuda-11.2 100
+sudo update-alternatives --install /usr/local/cuda cuda /usr/local/cuda-11.3 90
+sudo update-alternatives --config cuda

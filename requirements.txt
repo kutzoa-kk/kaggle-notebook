@@ -1,0 +1,29 @@
+autopep8
+flake8
+signate
+# jupyterthemes
+jupyterlab_templates
+jupyterlab_execute_time
+lckr-jupyterlab-variableinspector
+jupyterlab_code_formatter
+jupyterlab_widgets
+# jupyterlab-vim
+# jupyterlab-vimrc
+jupyterlab-lsp
+# jupyter_ai
+ipywidgets
+ipympl
+japanize_matplotlib
+plotly
+pyclustering
+hmmlearn
+xgboost
+lightgbm
+catboost
+Pillow
+dtale
+sweetviz
+sshtunnel
+pymysql
+RISE
+wordcloud
