@@ -1,6 +1,7 @@
 autopep8
 flake8
 signate
+kaggle
 # jupyterthemes
 jupyterlab_templates
 jupyterlab_execute_time
@@ -10,11 +11,13 @@ jupyterlab_widgets
 # jupyterlab-vim
 # jupyterlab-vimrc
 jupyterlab-lsp
-# jupyter_ai
+jupyter_ai
+jupyter-dash
 ipywidgets
 ipympl
 japanize_matplotlib
 plotly
+dash
 pyclustering
 hmmlearn
 xgboost
