@@ -1,0 +1,27 @@
+version: "3"
+services:
+    jupyter:
+        build:
+            context: .
+            dockerfile: Dockerfile_gpu
+        volumes:
+            - ${PWD}/code:/code
+            - ${PWD}/settings/.kaggle:/root/.kaggle
+            - ${PWD}/settings/.signate:/root/.signate
+            - ${PWD}/input:/dataset
+            - ${PWD}/settings/jupyterlab-settings/themes.jupyterlab-settings:/root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
+            - ${PWD}/settings/jupyterlab-settings/jupyterlab_code_formatter:/root/.jupyter/lab/user-settings/jupyterlab_code_formatter
+        working_dir: /code
+        ports:
+            - 8889:8889
+        command: jupyter-lab --ip 0.0.0.0 --allow-root -b localhost --NotebookApp.token=''
+        restart: always
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          capabilities: [gpu]
+        env_file:
+            - settings/open-api.key
+
