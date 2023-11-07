@@ -6,7 +6,7 @@ RUN pip install -U pip && \
     jupyter nbextensions_configurator enable
 
 COPY requirements.txt /tmp/
-RUN pip install --quiet --no-cache-dir --requirement /tmp/requirements.txt
+RUN pip install --quiet --no-cache-dir --requirement /tmp/requirements.gpu.txt
 
 # make directory
 RUN mkdir -p ~/.jupyter/lab/user-settings/jupyterlab_code_formatter

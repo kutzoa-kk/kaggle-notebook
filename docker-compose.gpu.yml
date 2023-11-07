@@ -6,11 +6,12 @@ services:
             dockerfile: Dockerfile_gpu
         volumes:
             - ${PWD}/code:/code
-            - ${PWD}/settings/.kaggle:/root/.kaggle
-            - ${PWD}/settings/.signate:/root/.signate
+            - ${PWD}/code/kaggle/input:/kaggle/input
             - ${PWD}/input:/dataset
-            - ${PWD}/settings/jupyterlab-settings/themes.jupyterlab-settings:/root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
-            - ${PWD}/settings/jupyterlab-settings/jupyterlab_code_formatter:/root/.jupyter/lab/user-settings/jupyterlab_code_formatter
+            - ${PWD}/settings/.kaggle:${HOME_DIR}/.kaggle
+            - ${PWD}/settings/.signate:${HOME_DIR}/.signate
+            - ${PWD}/settings/jupyterlab-settings/themes.jupyterlab-settings:${HOME_DIR}/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
+            - ${PWD}/settings/jupyterlab-settings/jupyterlab_code_formatter:${HOME_DIR}/.jupyter/lab/user-settings/jupyterlab_code_formatter
         working_dir: /code
         ports:
             - 8889:8889

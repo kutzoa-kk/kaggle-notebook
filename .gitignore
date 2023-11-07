@@ -1,6 +1,7 @@
 .DS_Store
 .env
 output/
+.virtual_documents/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
