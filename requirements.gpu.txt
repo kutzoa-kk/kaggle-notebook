@@ -14,6 +14,7 @@ jupyterlab_widgets
 jupyterlab-lsp
 # jupyterlab-vim
 # jupyterlab-vimrc
+# openai
 # jupyter_ai
 jedi-language-server
 ipywidgets

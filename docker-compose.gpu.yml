@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 services:
     jupyter:
         build:
@@ -14,8 +14,8 @@ services:
             - ${PWD}/settings/jupyterlab-settings/jupyterlab_code_formatter:${HOME_DIR}/.jupyter/lab/user-settings/jupyterlab_code_formatter
         working_dir: /code
         ports:
-            - 8889:8889
-        command: jupyter-lab --ip 0.0.0.0 --allow-root -b localhost --NotebookApp.token=''
+            - 10000:10000
+        command: jupyter lab --ip 0.0.0.0 --allow-root -b localhost --port=10000 --NotebookApp.token=''
         restart: always
         deploy:
             resources:
